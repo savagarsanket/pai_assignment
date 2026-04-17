@@ -19,10 +19,10 @@ Titanic dataset from Kaggle.
 Logistic Regression
 
 ## Steps
-Data preprocessing
-Feature engineering
-Model training
-Evaluation
+-Data preprocessing
+-Feature engineering
+-Model training
+-Evaluation
 
 ## Conclusion
 The model predicts survival with good accuracy.

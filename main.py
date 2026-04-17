@@ -51,6 +51,11 @@ test_df['Fare'] = test_df['Fare'].fillna(test_df['Fare'].median())
 
 
 
+for df in [train_df, test_df]:
+    df['FamilySize'] = df['SibSp'] + df['Parch'] + 1
+    df['IsAlone'] = 1
+    df.loc[df['FamilySize'] > 1, 'IsAlone'] = 0
+
 
 
 

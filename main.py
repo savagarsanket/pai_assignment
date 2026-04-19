@@ -86,6 +86,18 @@ for df in [train_df, test_df]:
 # Task: Train model and validate performance
 # ==========================================
 
+cv_scores = cross_val_score(model, X, Y, cv=5)
+
+print("\nCross Validation Scores:", cv_scores)
+print("Mean Accuracy:", cv_scores.mean())
+
+model.fit(X_train, Y_train)
+
+train_score = model.score(X_train, Y_train)
+test_score = model.score(X_test, Y_test)
+
+print("\nTrain Accuracy:", train_score)
+print("Test Accuracy:", test_score)
 
 
 
